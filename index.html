@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Обменяйзер</title>
+
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- accordion -->
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+  <!-- main -->
+  <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+<body>
+
+  <!-- popup -->
+  <div id="popup" class="popup">
+
+    <div class="popup__bg"></div>
+
+    <div id="popupCard" class="popup__card">
+
+      <a onclick="toggle()" class="popup__close cellPopup">
+        <svg>
+          <use xlink:href="img/sprite.svg#popup--close"></use>
+        </svg>
+      </a>
+
+      <h1 class="popup__heading big-heading">
+        Обратный звонок
+      </h1>
+
+      <p class="popup__desc big-desc">
+        Мы позвоним вам в рабочее время с 10.00 до 20.00
+      </p>
+
+
+      <form action="#" method="POST" class="popup__form">
+
+        <h3 class="form__heading">
+          Имя
+        </h3>
+
+        <input minlength="2" maxlength="15" placeholder="Имя" type="text" class="form__input">
+
+
+        <h3 class="form__heading">
+          Телефон
+        </h3>
+
+        <input minlength="2" maxlength="15" value="+7" placeholder="+7 (777) 777 77 77" type="tel" class="form__input">
+
+        <button onclick="none()" class="form__btn btn btn_fill">
+          Заказать звонок
+        </button>
+
+        <span class="form__agree">
+          Нажимая на кнопку, вы соглашаетесь на обработку персональных данных
+        </span>
+
+      </form>
+
+    </div>
+
+    <div id="popupThx" class="popup__thx not_visible">
+
+      <a onclick="noneThx()" class="popup__close cellPopup">
+        <svg>
+          <use xlink:href="img/sprite.svg#popup--close"></use>
+        </svg>
+      </a>
+
+      <h1 class="popup__heading big-heading">
+        Обратный звонок
+      </h1>
+
+      <p class="popup__desc big-desc">
+        Мы позвоним вам в рабочее время с 10.00 до 20.00
+      </p>
+
+    </div>
+
+  </div>
+
+    
+  <!-- header -->
+  <header class="header">
+    <div class="container header__container">
+
+      <a href="#" class="header__logo">
+        <svg class="header__logo__svg">
+          <use xlink:href="img/sprite.svg#header--logo"></use>
+        </svg>
+      </a>
+  
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+  
+          <li class="nav__item">
+            <a href="#preference" class="nav__link">
+              Преимущества
+            </a>
+          </li>
+           
+          <li class="nav__item">
+            <a href="#steps" class="nav__link">
+              О проекте
+            </a>
+          </li>
+           
+          <li class="nav__item">
+            <a href="#games" class="nav__link">
+              Каталог игр
+            </a>
+          </li>
+           
+          <li class="nav__item">
+            <a href="#faq" class="nav__link">
+              Часто задаваемые вопросы  
+            </a>
+          </li>
+           
+        </ul>
+      </nav>
+  
+      <a href="#main" class="header__btn btn btn_fill">
+        Обменять
+      </a>
+
+    </div>
+  </header>
+
+
+  <!-- main -->
+  <main>
+
+    <!-- hero -->
+    <section class="hero">
+      <img class="hero__bg" src="img/hero/bg.png">
+      <img class="hero__gamepad" src="img/hero/gamepad.png" data-tilt-reverse="true" data-tilt-full-page-listening>
+      <img class="hero__bg-up" src="img/hero/bg-up.png">
+
+      <div class="container hero__container">
+        
+        <h1 class="hero__heading big-heading">
+          Оригинальные видеоигры, приставки и аксессуары
+        </h1>
+        
+        <p class="hero__desc big-desc">
+          Обменяйте свою игру на ту, которая вам нужна. У нас вы найдете не только популярные диски, но и редкие, эксклюзивные
+        </p>
+        
+        <div class="hero__btn-box btn-box">
+          <a href="#main" class="hero__btn btn btn_fill">
+            Обменять
+          </a>
+          <a href="#preference" class="hero__btn btn btn_border">
+            Подробнее
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- preference -->
+    <section id="preference" class="preference">
+      <div class="container preference__container">
+
+        <h2 class="preference__heading heading">
+          Почему обмен лучше?
+        </h2>
+
+        <ul class="preference__list">
+
+          <li class="preference__item">
+            <svg class="preference__item__svg">
+              <use xlink:href="img/sprite.svg#preference--1"></use>
+            </svg>
+
+            <h3 class="preference__item__low-heading low-heading">
+              Почему обмен лучше?
+            </h3>
+
+            <p class="preference__item__low-desc low-desc">
+              Вы можете получить то, что давно убрали с полок магазинов, а некоторые из игр вообще не выходили в нашей стране
+            </p>
+          </li>
+           
+          <li class="preference__item">
+            <svg class="preference__item__svg">
+              <use xlink:href="img/sprite.svg#preference--2"></use>
+            </svg>
+
+            <h3 class="preference__item__low-heading low-heading">
+              Почему обмен лучше?
+            </h3>
+
+            <p class="preference__item__low-desc low-desc">
+              Вы можете получить то, что давно убрали с полок магазинов, а некоторые из игр вообще не выходили в нашей стране
+            </p>
+          </li>
+           
+          <li class="preference__item">
+            <svg class="preference__item__svg">
+              <use xlink:href="img/sprite.svg#preference--3"></use>
+            </svg>
+
+            <h3 class="preference__item__low-heading low-heading">
+              Почему обмен лучше?
+            </h3>
+
+            <p class="preference__item__low-desc low-desc">
+              Вы можете получить то, что давно убрали с полок магазинов, а некоторые из игр вообще не выходили в нашей стране
+            </p>
+          </li>
+           
+          <li class="preference__item">
+            <svg class="preference__item__svg">
+              <use xlink:href="img/sprite.svg#preference--4"></use>
+            </svg>
+
+            <h3 class="preference__item__low-heading low-heading">
+              Почему обмен лучше?
+            </h3>
+
+            <p class="preference__item__low-desc low-desc">
+              Вы можете получить то, что давно убрали с полок магазинов, а некоторые из игр вообще не выходили в нашей стране
+            </p>
+          </li>
+           
+          <li class="preference__item">
+            <svg class="preference__item__svg">
+              <use xlink:href="img/sprite.svg#preference--5"></use>
+            </svg>
+
+            <h3 class="preference__item__low-heading low-heading">
+              Почему обмен лучше?
+            </h3>
+
+            <p class="preference__item__low-desc low-desc">
+              Вы можете получить то, что давно убрали с полок магазинов, а некоторые из игр вообще не выходили в нашей стране
+            </p>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- steps -->
+    <section id="steps" class="steps">
+      <div class="container steps__container">
+
+        <h2 class="steps__heading heading">
+          Как это работает?
+        </h2>
+
+        <p class="steps__desc desc">
+          Всего 3 простых шага
+        </p>
+
+
+        <ul class="steps__list">
+
+          <li class="steps__item">
+            <span class="steps__item__number">
+              01
+            </span>
+            <p class="steps__item__desc desc">
+              Введите название приставки или игры, которые хотите сдать. Их может быть несколько
+            </p>
+          </li>
+
+          <li class="steps__item">
+            <span class="steps__item__number">
+              02
+            </span>
+            <p class="steps__item__desc desc">
+              Затем введите названия того, что хотите получить
+            </p>
+          </li>
+
+          <li class="steps__item">
+            <span class="steps__item__number">
+              03
+            </span>
+            <p class="steps__item__desc desc">
+              Оставьте свои контакты, и мы свяжемся с вами в рабочее время с 10.00 до 20.00
+            </p>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- trade -->
+    <section class="trade">
+      <div class="trade__bg"></div>
+      <img src="img/trade/man.png" class="trade__man">
+
+      <div class="container trade__container">
+
+        <h1 class="trade__heading big-heading">
+          Получи искомую игру <br> и начни ее прохождение
+        </h1>
+
+        <p class="trade__desc big-desc">
+          А если остались вопросы — закажи обратный звонок
+        </p>
+
+        <div class="trade__btn-box btn-box">
+          <a href="#main" class="trade__btn btn btn_fill">
+            Обменять
+          </a>
+          <a onclick="toggle()" class="trade__btn btn btn_border">
+            Заказать звонок
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- games -->
+    <section id="games" class="games">
+      <div class="container games__container">
+
+        <h2 class="games__heading heading">
+          Какие игры у нас есть?
+        </h2>
+
+        <!-- Slider main container -->
+        <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+
+            <div class="swiper-slide">
+              <div class="card">
+                
+                <img class="card__img" src="img/games/1.png" alt="Diablo">
+                
+                <h3 class="card__heading low-heading">
+                  Diablo 3
+                </h3>
+
+                <p class="card__desc low-desc">
+                  Много лет минуло с тех пор, как <br> в Санктуарии бесчинствовали <br> орды нежити. В поисках знаний, <br> которые помогут одолеть <br> новые...
+                </p>
+
+                <a href="#" class="card__more">
+                  Читать полностью
+                </a>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                
+                <img class="card__img" src="img/games/2.png" alt="Diablo">
+
+                <h3 class="card__heading low-heading">
+                  Diablo 3
+                </h3>
+
+                <p class="card__desc low-desc">
+                  Много лет минуло с тех пор, как <br> в Санктуарии бесчинствовали <br> орды нежити. В поисках знаний, <br> которые помогут одолеть <br> новые...
+                </p>
+
+                <a href="#" class="card__more">
+                  Читать полностью
+                </a>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                
+                <img class="card__img" src="img/games/3.png" alt="Diablo">
+
+                <h3 class="card__heading low-heading">
+                  Diablo 3
+                </h3>
+
+                <p class="card__desc low-desc">
+                  Много лет минуло с тех пор, как <br> в Санктуарии бесчинствовали <br> орды нежити. В поисках знаний, <br> которые помогут одолеть <br> новые...
+                </p>
+
+                <a href="#" class="card__more">
+                  Читать полностью
+                </a>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                
+                <img class="card__img" src="img/games/1.png" alt="Diablo">
+
+                <h3 class="card__heading low-heading">
+                  Diablo 3
+                </h3>
+
+                <p class="card__desc low-desc">
+                  Много лет минуло с тех пор, как <br> в Санктуарии бесчинствовали <br> орды нежити. В поисках знаний, <br> которые помогут одолеть <br> новые...
+                </p>
+
+                <a href="#" class="card__more">
+                  Читать полностью
+                </a>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                
+                <img class="card__img" src="img/games/2.png" alt="Diablo">
+
+                <h3 class="card__heading low-heading">
+                  Diablo 3
+                </h3>
+
+                <p class="card__desc low-desc">
+                  Много лет минуло с тех пор, как <br> в Санктуарии бесчинствовали <br> орды нежити. В поисках знаний, <br> которые помогут одолеть <br> новые...
+                </p>
+
+                <a href="#" class="card__more">
+                  Читать полностью
+                </a>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                
+                <img class="card__img" src="img/games/3.png" alt="Diablo">
+
+                <h3 class="card__heading low-heading">
+                  Diablo 3
+                </h3>
+
+                <p class="card__desc low-desc">
+                  Много лет минуло с тех пор, как <br> в Санктуарии бесчинствовали <br> орды нежити. В поисках знаний, <br> которые помогут одолеть <br> новые...
+                </p>
+
+                <a href="#" class="card__more">
+                  Читать полностью
+                </a>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                
+                <img class="card__img" src="img/games/1.png" alt="Diablo">
+                
+                <h3 class="card__heading low-heading">
+                  Diablo 3
+                </h3>
+
+                <p class="card__desc low-desc">
+                  Много лет минуло с тех пор, как <br> в Санктуарии бесчинствовали <br> орды нежити. В поисках знаний, <br> которые помогут одолеть <br> новые...
+                </p>
+
+                <a href="#" class="card__more">
+                  Читать полностью
+                </a>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                
+                <img class="card__img" src="img/games/2.png" alt="Diablo">
+
+                <h3 class="card__heading low-heading">
+                  Diablo 3
+                </h3>
+
+                <p class="card__desc low-desc">
+                  Много лет минуло с тех пор, как <br> в Санктуарии бесчинствовали <br> орды нежити. В поисках знаний, <br> которые помогут одолеть <br> новые...
+                </p>
+
+                <a href="#" class="card__more">
+                  Читать полностью
+                </a>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                
+                <img class="card__img" src="img/games/3.png" alt="Diablo">
+
+                <h3 class="card__heading low-heading">
+                  Diablo 3
+                </h3>
+
+                <p class="card__desc low-desc">
+                  Много лет минуло с тех пор, как <br> в Санктуарии бесчинствовали <br> орды нежити. В поисках знаний, <br> которые помогут одолеть <br> новые...
+                </p>
+
+                <a href="#" class="card__more">
+                  Читать полностью
+                </a>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                
+                <img class="card__img" src="img/games/1.png" alt="Diablo">
+
+                <h3 class="card__heading low-heading">
+                  Diablo 3
+                </h3>
+
+                <p class="card__desc low-desc">
+                  Много лет минуло с тех пор, как <br> в Санктуарии бесчинствовали <br> орды нежити. В поисках знаний, <br> которые помогут одолеть <br> новые...
+                </p>
+
+                <a href="#" class="card__more">
+                  Читать полностью
+                </a>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                
+                <img class="card__img" src="img/games/2.png" alt="Diablo">
+
+                <h3 class="card__heading low-heading">
+                  Diablo 3
+                </h3>
+
+                <p class="card__desc low-desc">
+                  Много лет минуло с тех пор, как <br> в Санктуарии бесчинствовали <br> орды нежити. В поисках знаний, <br> которые помогут одолеть <br> новые...
+                </p>
+
+                <a href="#" class="card__more">
+                  Читать полностью
+                </a>
+
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                
+                <img class="card__img" src="img/games/3.png" alt="Diablo">
+
+                <h3 class="card__heading low-heading">
+                  Diablo 3
+                </h3>
+
+                <p class="card__desc low-desc">
+                  Много лет минуло с тех пор, как <br> в Санктуарии бесчинствовали <br> орды нежити. В поисках знаний, <br> которые помогут одолеть <br> новые...
+                </p>
+
+                <a href="#" class="card__more">
+                  Читать полностью
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <a href="#" class="games__btn btn btn_border">
+          Смотреть все
+        </a>
+
+      </div>
+    </section>
+
+
+    <!-- faq -->
+    <section id="faq" class="faq">
+      <div class="container faq__container">
+
+        <h2 class="faq__heading heading">
+          Часто задаваемые вопросы
+        </h2>
+
+        <div id="accordion">
+
+          <h3 class="accordion__heading low-heading">
+            Отправляете ли вы игры в другой город и какими службами доставки?
+          </h3>
+
+          <div class="accordion__desc low-desc">
+            Отправляем по согласованию удобной вам службой доставки. Например, Почта России, СДЕК, Boxberry и др
+          </div>
+
+
+          <h3 class="accordion__heading low-heading">
+            Как быстро осуществляется доставка по Москве и Области?
+          </h3>
+
+          <div class="accordion__desc low-desc">
+            Отправляем по согласованию удобной вам службой доставки. Например, Почта России, СДЕК, Boxberry и др
+          </div>
+
+
+          <h3 class="accordion__heading low-heading">
+            Какие есть гарантии?
+          </h3>
+
+          <div class="accordion__desc low-desc">
+            Отправляем по согласованию удобной вам службой доставки. Например, Почта России, СДЕК, Boxberry и др
+          </div>
+
+
+          <h3 class="accordion__heading low-heading">
+            Можно ли обменять игру, если я нахожусь в другом городе?
+          </h3>
+
+          <div class="accordion__desc low-desc">
+            Отправляем по согласованию удобной вам службой доставки. Например, Почта России, СДЕК, Boxberry и др
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container footer__container">
+
+      <a target="_blank" href="https://yandex.ru/maps/213/moscow/geo/shosse_entuziastov/8060791/?ll=37.774805%2C55.763384&source=wizgeo&utm_medium=maps-desktop&utm_source=serp&z=14.71" class="footer__f-list">
+        Москва <br> Шоссе Энтузиастов д.33 Л, <br> подъезд А, 2 этаж, офис 205
+      </a>
+
+      <ul class="footer__s-list">
+
+        <li class="footer__s-item">
+          <a href="mailto:shop@xxlgame.ru">
+            shop@xxlgame.ru
+          </a>
+        </li>
+
+        <li class="footer__s-item">
+          <a href="tel:+79260356375">
+            +7(926)035-63-75
+          </a>
+        </li>
+
+      </ul>
+
+      <ul class="footer__t-list">
+
+        <li class="footer__t-item">
+          <a href="#">
+            <svg>
+              <use xlink:href="img/sprite.svg#footer--inst"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="footer__t-item">
+          <a href="#">
+            <svg>
+              <use xlink:href="img/sprite.svg#footer--tg"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="footer__t-item">
+          <a href="#">
+            <svg>
+              <use xlink:href="img/sprite.svg#footer--vk"></use>
+            </svg>
+          </a>
+        </li>
+
+      </ul>
+
+      <a href="#" class="footer__privacy">
+        Политика конфиденциальности
+      </a>
+
+    </div>
+  </footer>
+
+
+  <!-- vanila tilt -->
+  <script src="js/vanilla-tilt.js"></script>
+
+  <!-- swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- accordion -->
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!-- main js -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
